@@ -1,8 +1,8 @@
 # apartment_analysis_egm
 
-# 1. Start backend
-# python backend.py
+1. Start backend
+python backend.py
 
-# 2. Start frontend
-# cd svelte-app
-# npm run dev
+2. Start frontend
+cd svelte-app
+npm run dev
