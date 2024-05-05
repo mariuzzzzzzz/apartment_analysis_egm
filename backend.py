@@ -37,7 +37,7 @@ def get_demolition_date():
             feature_id = results[0]['attrs']['featureId']
             egid = feature_id.split('_')[0]
 
-            csv_path = '/Users/mariusaffolter/Documents/200_Studium/220_Semester/24FS/Einsatz Geodaten Marketing/Project/apartment_analysis_egm/prediction_bestehende_wohnungen.csv'
+            csv_path = './prediction_bestehende_wohnungen.csv'
             df_csv = pd.read_csv(csv_path)
             df_csv['EGID'] = df_csv['EGID'].astype(str)  # Ensure EGID is treated as a string
             filtered_df = df_csv[df_csv['EGID'] == egid]
