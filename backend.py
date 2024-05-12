@@ -8,10 +8,9 @@ app = Flask(__name__)
 CORS(app, supports_credentials=True, resources={r"/api/*": {"origins": "*"}})
 
 @app.route('/get_demolition_date', methods=['POST', 'OPTIONS'])
-@cross_origin()  # Ensure CORS headers are set correctly
+@cross_origin()
 def get_demolition_date():
     if request.method == 'OPTIONS':
-        # Create an empty response for OPTIONS requests with necessary headers
         response = make_response()
         response.headers.add("Access-Control-Allow-Origin", "*")
         response.headers.add("Access-Control-Allow-Headers", "Content-Type,Authorization")
@@ -39,7 +38,7 @@ def get_demolition_date():
 
             csv_path = './prediction_bestehende_wohnungen.csv'
             df_csv = pd.read_csv(csv_path)
-            df_csv['EGID'] = df_csv['EGID'].astype(str)  # Ensure EGID is treated as a string
+            df_csv['EGID'] = df_csv['EGID'].astype(str)
             filtered_df = df_csv[df_csv['EGID'] == egid]
         
             if not filtered_df.empty:

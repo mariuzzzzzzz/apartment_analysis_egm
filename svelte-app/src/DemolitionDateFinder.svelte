@@ -17,14 +17,14 @@
             const data = await response.json();
             const resultElement = document.getElementById("result");
             resultElement.textContent = "Demolition Date: " + data.demolition_date;
-            resultElement.style.color = "red"; // Set text color to green if successful
-            resultElement.style.fontSize = "20px"; // Set font size to 20px
+            resultElement.style.color = "red";
+            resultElement.style.fontSize = "20px";
         } else {
             const errorText = await response.text();
             const resultElement = document.getElementById("result");
             resultElement.textContent = "Error: " + errorText;
-            resultElement.style.color = "red"; // Set text color to red on error
-            resultElement.style.fontSize = "20px"; // Set font size to 20px
+            resultElement.style.color = "red";
+            resultElement.style.fontSize = "20px";
             console.error("Error:", errorText);
         }
     
@@ -35,27 +35,27 @@
     #container {
         display: flex;
         flex-direction: column;
-        gap: 30px; /* Adds space between children */
+        gap: 30px;
     }
 
     #result {
-        padding: 20px; /* Adds padding inside the result div */
+        padding: 20px;
     }
 
     input, button {
         padding: 10px;
-        font-size: 16px; /* Adjust font size as necessary */
+        font-size: 16px;
     }
 
     button {
-        cursor: pointer; /* Makes it clear that the button is clickable */
-        background-color: #f0f0f0; /* Light grey background */
+        cursor: pointer;
+        background-color: #f0f0f0;
         border: none;
-        border-radius: 5px; /* Rounded corners for the button */
+        border-radius: 5px;
     }
 
     button:hover {
-        background-color: #e0e0e0; /* Darker grey on hover */
+        background-color: #e0e0e0;
     }
 </style>
 
